@@ -1,0 +1,36 @@
+/*
+@styleguide
+
+@title Layers
+
+Controlling the number of layers a page has with z-index selectors.
+Use the following selectors to get the specific layer. This eliminates the need to
+manually set z-index that can be difficult to track.
+
+    1. .layer-critical    gives you a zindex of 10000
+    2. .layer-high        gives you a zindex of 9000
+    3. .layer-medium      gives you  a zindex of  8000
+    4. .layer-low         gives you a zindex of 7000
+    5. .layer-backdrop    gives you a zindex of 6000
+
+*/
+
+.layer-critical {
+  z-index: 10000;
+}
+
+.layer-high {
+  z-index: 9000;
+}
+
+.layer-medium {
+  z-index: 8000;
+}
+
+.layer-low {
+  z-index: 7000;
+}
+
+.layer-backdrop {
+  z-index: 6000;
+}

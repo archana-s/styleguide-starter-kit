@@ -1,0 +1,110 @@
+/*
+@styleguide
+
+@title Buttons
+
+Buttons can be categorized based on form and function.
+These are three categories for buttons based on function:
+    1. primary -
+       Ones that call for action and are bold and bright. A page can have just one of these.
+    2. link -
+      Button that looks like a link
+    3. passive(default) -
+       Buttons that are used in the page which do not immediately call for action.
+       They are not the primary action for the page.
+
+Buttons can be small or large depending on the usecase. Here are two variation based on form:
+    1. large - padding of 24px/36px
+    2. medium - padding of 16px/20px
+    3. default - padding 14px/18px
+
+All buttons have a minimum width set.
+
+<button class="primary">Primary Action</button>
+
+    <button class="primary">Primary Action</button>
+
+<button class="passive">passive</button>
+
+    <button class="passive">passive</button>
+
+<button class="link">Link</button>
+
+    <button class="link">Link</button>
+
+<button class="primary large">Large Primary</button>
+
+    <button class="primary large">Large Primary</button>
+
+<button class="primary medium">Medium Primary</button>
+
+    <button class="primary medium">Medium Primary</button>
+
+<button class="passive large">Large passive</button>
+
+    <button class="passive large">Large passive</button>
+
+<button class="passive medium">Medium passive</button>
+
+    <button class="passive medium">Medium passive</button>
+
+<button class="link">Normal Link</button>
+
+    <button class="link">Normal Link</button>
+*/
+
+:root {
+  --button-background-color: transparent;
+  --button-font-size: 14px;
+  --button-padding: 14px 18px;
+}
+
+button {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.08em;
+  font-weight: 300;
+  font-size: var(--button-font-size);
+  box-shadow: none;
+  border: none;
+  text-transform: uppercase;
+}
+
+button:not(.link) {
+  min-width: 120px;
+}
+
+button.primary, button.passive {
+  padding: var(--button-padding);
+}
+
+button.primary {
+  background-color: var(--color-accent-blue);
+  color: white;
+}
+
+button.primary:hover {
+  background-color: var(--color-accent-blue-g1);
+}
+
+button.passive {
+  background-color: transparent;
+  border: 1px solid var(--color-accent-blue);
+  color: var(--color-primary-text);
+}
+
+button.passive:hover {
+  background-color: rgba(204, 204, 204, 0.5);
+}
+
+button.link:hover, button.link:active, button.link:focus{
+  text-decoration: underline;
+}
+
+button.large {
+  padding: 24px 36px;
+  font-size: 20px;
+}
+
+button.medium {
+  padding: 16px 20px;
+}

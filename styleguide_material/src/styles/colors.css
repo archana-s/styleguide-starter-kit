@@ -1,0 +1,69 @@
+/* @start color */
+:root {
+    /* Main colors for the app: Logo colors, banner colors, main background  */
+    --color-primary: #9B7536;
+
+    /* Text colors */
+    --color-text-primary: #40545D;
+    --color-text-link: #3F51B5;
+    --color-text-on-dark: #FFFFFF;
+
+    /** TIP: Check for contrast ratio again all background colors,
+        * notification colors, against the text colors and make sure the constrast ratio is 4.5.
+        * This makes it accessible and available to a larger audience.
+    **/
+
+    /* Overall colors for your app */
+    --color-accent-green: #4B4C22;
+    --color-accent-blue: #40545D;
+
+    /** TIP: Add other colors you think are necessary for your project.
+      * Try not to include more than 3 shades of that color. This leads to color collisions and
+      * more often than not, people cannot discern the differences in subtle differences.
+    **/
+    /** TIP: This can be included as background colors, icon colors, borders.
+        These colors should not be used as color for text. Add them to text colors.
+    **/
+
+    /* Divider Colors - Used for borders and dividers*/
+    --color-divider: rgba(0, 0, 0, 0.5);
+    --color-divider-light: rgba(0, 0, 0, 0.35);
+
+    /* The inevitables */
+    --color-gold-g1: #F4F3EE;
+    --color-white-g1: #FFFFFF;
+    --color-white-g2: #F4F3EE;
+    --color-white-g3: #CCBA9A;
+    --color-accent-blue-g1: #263237;
+
+    --theme-light: var(--color-white-g2);
+    --theme-white: white;
+    --theme-gray: #E1E8EA;
+
+    /** TIP: Keep this section for the colors you will inevitably need in a large app.
+        Make sure to reduce to keep the variations of each shade under 3 or 5. These
+        are generally used for borders, backgrounds, icons. If you are using them with text,
+        make sure to check for the contrast ratio against your text colors and keep it 4.5 or higher
+    **/
+
+    /** TIP: Discourage lighten(color, 10%) and other similar functions.
+        As easy as this may be, it adds to color collisions. Instead, evaluate the colors
+        and add the appropriate ones here **/
+}
+
+.theme-light {
+  background-color: var(--theme-light);
+}
+
+.theme-gray {
+  background-color: var(--theme-gray);
+}
+
+.color-text-primary {
+  color: var(--color-text-primary);
+}
+
+.color-text-link {
+  color: var(--color-text-link);
+}
+/* @end color */

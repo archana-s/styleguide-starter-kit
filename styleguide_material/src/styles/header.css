@@ -1,0 +1,10 @@
+header {
+  height: 60px;
+  margin: 4px;
+  background-color: var(--color-primary);
+  padding: 0 32px;
+}
+
+header h1, header h2, header h3 {
+  color: var(--color-text-on-dark);
+}

@@ -1,0 +1,54 @@
+{
+  "name": "styleguide-starter-kit",
+  "version": "0.5.3",
+  "description": "A styleguide template with PostCSS and CSS4 feature set",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "autoprefixer": "^6.7.2",
+    "cssnano": "^3.10.0",
+    "express": "^4.14.1",
+    "gulp": "^3.9.1",
+    "postcss": "^5.0.16",
+    "postcss-css-variables": "^0.6.0",
+    "readline": "^1.3.0",
+    "recursive-copy": "^2.0.5"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.22.0",
+    "bluebird": "^3.4.7",
+    "fs-promise": "^2.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-postcss": "^6.1.0",
+    "postcss-custom-properties": "^5.0.0",
+    "postcss-extend": "^1.0.5",
+    "postcss-flexbox": "^1.0.2",
+    "postcss-import": "^8.0.2",
+    "postcss-speech-bubble": "^1.0.12",
+    "postcss-style-guide": "^0.13.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish-local": "babel --presets es2015 setup_dev.js --out-file setup.js&sudo npm install -g",
+    "publish": "npm version patch&npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/archana-s/kala.git"
+  },
+  "keywords": [
+    "styleguide",
+    "style",
+    "patterns",
+    "ui"
+  ],
+  "bin": {
+    "fragmos": "./setup.js"
+  },
+  "author": "Archana Sankaranarayanan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/archana-s/kala/issues"
+  },
+  "homepage": "https://github.com/archana-s/kala#readme"
+}
