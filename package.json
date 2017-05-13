@@ -1,6 +1,6 @@
 {
   "name": "styleguide-starter-kit",
-  "version": "0.5.121",
+  "version": "0.5.122",
   "description": "A styleguide template with PostCSS and CSS4 feature set",
   "main": "gulpfile.js",
   "dependencies": {
