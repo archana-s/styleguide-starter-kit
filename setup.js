@@ -10,6 +10,8 @@ npm.load(function (err) {
       throw err;
     }
 
+    console.log('Installed all necessary npm');
+
     var copy = require('recursive-copy');
     var rl = require('readline');
     var fs = require('fs');
@@ -17,13 +19,13 @@ npm.load(function (err) {
     // Create a directory one level above fragmos
     var styleguideExists = fs.existsSync('./styleguide');
 
-    var styleguideDir = './styleguide';
     if (styleguideExists) {
-      console.log('styleguide folder exists. Would you like to provide a different name? What name would you like for the folder?.');
+      console.log('styleguide folder exists. Please rename it and try again.');
     }
 
     if (!styleguideExists) {
       (function () {
+        console.log('Creating a styleguide now ...');
         var i = rl.createInterface(process.stdin, process.stdout, null);
 
         // Ask the user for project name and logo location
@@ -32,17 +34,17 @@ npm.load(function (err) {
 
             // Create the project Styleguide directory
             fs.mkdir('./styleguide', function (data) {
-              copy('/usr/local/lib/node_modules/fragmos/styleguide_material/src', './styleguide/src', function (err, results) {
+              copy('/usr/local/lib/node_modules/fragmos/src', './styleguide/src', function (err, results) {
                 if (err) {
                   throw err;
                 }
 
                 // Add package.json and index.js files
-                fs.createReadStream('/usr/local/lib/node_modules/fragmos/styleguide_material/package.json').pipe(fs.createWriteStream('./styleguide/package.json'));
-                fs.createReadStream('/usr/local/lib/node_modules/fragmos/styleguide_material/index.js').pipe(fs.createWriteStream('./styleguide/index.js'));
+                fs.createReadStream('/usr/local/lib/node_modules/fragmos/package.json.toCopy').pipe(fs.createWriteStream('./styleguide/package.json'));
+                fs.createReadStream('/usr/local/lib/node_modules/fragmos/index.js').pipe(fs.createWriteStream('./styleguide/index.js'));
 
                 // Include the project name in gulpfile
-                var gulpFileData = fs.readFileSync('/usr/local/lib/node_modules/fragmos/styleguide_material/gulpfile.js', 'utf-8');
+                var gulpFileData = fs.readFileSync('/usr/local/lib/node_modules/fragmos/gulpfile.js', 'utf-8');
                 gulpFileData = gulpFileData.replace('%%project%%', projectName);
                 try {
                   fs.writeFileSync('./styleguide/gulpfile.js', gulpFileData);
@@ -50,7 +52,7 @@ npm.load(function (err) {
                   throw err;
                 }
 
-                copy('/usr/local/lib/node_modules/fragmos/styleguide_material/public', './styleguide/public', function (err, data) {
+                copy('/usr/local/lib/node_modules/fragmos/public', './styleguide/public', function (err, data) {
                   if (err) throw err;
                   if (logoLocation && fs.existsSync(logoLocation)) {
                     fs.createReadStream(logoLocation).pipe(fs.createWriteStream('./styleguide/public/images/logo.png'));

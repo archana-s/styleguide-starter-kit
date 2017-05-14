@@ -1,6 +1,6 @@
 {
-  "name": "styleguide-starter-kit",
-  "version": "0.5.126",
+  "name": "fragmos",
+  "version": "0.5.3",
   "description": "A styleguide template with PostCSS and CSS4 feature set",
   "main": "gulpfile.js",
   "dependencies": {
@@ -29,8 +29,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish-local": "babel --presets es2015 setup_dev.js --out-file setup.js&sudo npm install -g",
-    "publish": "npm version patch&npm publish"
+    "build": "npm install&gulp build:styleguide&gulp copy:common-files",
+    "start": "node ./index.js&gulp",
+    "babelify": "babel --presets es2015 setup_dev.js --out-file setup.js"
   },
   "repository": {
     "type": "git",
