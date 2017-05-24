@@ -1,6 +1,6 @@
 {
-  "name": "fragmos",
-  "version": "0.5.8",
+  "name": "styleguide-starter-kit",
+  "version": "0.7.0",
   "description": "A styleguide template with PostCSS and CSS4 feature set",
   "main": "gulpfile.js",
   "dependencies": {
@@ -35,7 +35,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/archana-s/kala.git"
+    "url": "git+https://github.com/archana-s/styleguide-starter-kit.git"
   },
   "keywords": [
     "styleguide",
@@ -49,7 +49,7 @@
   "author": "Archana Sankaranarayanan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/archana-s/kala/issues"
+    "url": "https://github.com/archana-s/styleguide-starter-kit/issues"
   },
-  "homepage": "https://github.com/archana-s/kala#readme"
+  "homepage": "https://github.com/archana-s/styleguide-starter-kit#readme"
 }

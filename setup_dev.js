@@ -13,7 +13,7 @@ npm.load(err => {
     const rl = require('readline')
     const fs = require('fs')
 
-    // Create a directory one level above fragmos
+    // Create a directory one level above styleguide-starter-kit
     const styleguideExists = fs.existsSync('./styleguide');
 
     if (styleguideExists) {
@@ -29,17 +29,17 @@ npm.load(err => {
 
           // Create the project Styleguide directory
           fs.mkdir('./styleguide', function(data) {
-            copy('/usr/local/lib/node_modules/fragmos/src', './styleguide/src', function(err, results) {
+            copy('/usr/local/lib/node_modules/styleguide-starter-kit/src', './styleguide/src', function(err, results) {
               if (err) {
                 throw err;
               }
 
               // Add package.json and index.js files
-              fs.createReadStream('/usr/local/lib/node_modules/fragmos/package.json.toCopy').pipe(fs.createWriteStream('./styleguide/package.json'));
-              fs.createReadStream('/usr/local/lib/node_modules/fragmos/index.js').pipe(fs.createWriteStream('./styleguide/index.js'));
+              fs.createReadStream('/usr/local/lib/node_modules/styleguide-starter-kit/package.json.toCopy').pipe(fs.createWriteStream('./styleguide/package.json'));
+              fs.createReadStream('/usr/local/lib/node_modules/styleguide-starter-kit/index.js').pipe(fs.createWriteStream('./styleguide/index.js'));
 
               // Include the project name in gulpfile
-              let gulpFileData = fs.readFileSync('/usr/local/lib/node_modules/fragmos/gulpfile.js', 'utf-8')
+              let gulpFileData = fs.readFileSync('/usr/local/lib/node_modules/styleguide-starter-kit/gulpfile.js', 'utf-8')
               gulpFileData = gulpFileData.replace('%%project%%', projectName)
               try {
                 fs.writeFileSync('./styleguide/gulpfile.js', gulpFileData)
@@ -47,7 +47,7 @@ npm.load(err => {
                 throw err;
               }
 
-              copy('/usr/local/lib/node_modules/fragmos/public', './styleguide/public', function(err, data) {
+              copy('/usr/local/lib/node_modules/styleguide-starter-kit/public', './styleguide/public', function(err, data) {
                 if (err) throw err;
                 if (logoLocation && fs.existsSync(logoLocation)) {
                   fs.createReadStream(logoLocation).pipe(fs.createWriteStream('./styleguide/public/images/logo.png'))

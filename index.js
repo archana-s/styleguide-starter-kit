@@ -2,7 +2,7 @@ var express = require('express')
 var app = express()
 var path = require('path')
 
-console.log('Hello, welcome to Fragmos v1.0');
+console.log('Hello, welcome to Styleguide starter kit');
 
 app.get('/demo', function (req, res) {
   res.sendFile(path.join(__dirname, '/public/demo.html'))
