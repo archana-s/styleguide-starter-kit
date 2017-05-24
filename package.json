@@ -44,7 +44,7 @@
     "ui"
   ],
   "bin": {
-    "fragmos": "./setup.js"
+    "styleguide-starter-kit": "./setup.js"
   },
   "author": "Archana Sankaranarayanan",
   "license": "ISC",
