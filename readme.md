@@ -1,7 +1,6 @@
 # styleguide-starter-kit
 
-[Style guide generated from the stater kit](https://ssk-tester.firebaseapp.com)
-
+[Style guide generated from the stater kit](https://ssk-tester.firebaseapp.com)  
 [Demo using the style guide](https://ssk-tester.firebaseapp.com/demo.html)
 
 ## What is it?
