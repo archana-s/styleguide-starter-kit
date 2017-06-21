@@ -44,7 +44,7 @@
     "ui"
   ],
   "bin": {
-    "styleguide-starter-kit": "./setup.js"
+    "create-styleguide": "./setup.js"
   },
   "author": "Archana Sankaranarayanan",
   "license": "ISC",
