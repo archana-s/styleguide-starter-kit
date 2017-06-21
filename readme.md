@@ -1,5 +1,9 @@
 # styleguide-starter-kit
 
+[Style guide generated from the stater kit](https://ssk-tester.firebaseapp.com)
+
+[Demo using the style guide](https://ssk-tester.firebaseapp.com/demo.html)
+
 ## What is it?
 It is boilerplate style guide. It includes the following:
 - boilerplate pattern library in CSS (includes CSS for colors, type, buttons, cards, spinners, layouts, layers,...). 
