@@ -1,0 +1,98 @@
+/*
+@styleguide
+
+@title Tabs
+
+Tabs/Navigation Bar
+
+Default tabs
+<header class="main middle">
+  <nav role="navigation" aria-label="Main Menu">
+    <ul class="tabs">
+      <li>
+        <a class="nostyle">Item 1</a>
+      </li>
+      <li class="selected">
+        <a class="nostyle">Item 2</a>
+      </li>
+      <li>
+        <a class="nostyle">Item 3</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+    <header class="main middle">
+      <nav role="navigation" aria-label="Main Menu">
+        <ul class="tabs">
+          <li>
+            <a class="nostyle">Item 1</a>
+          </li>
+          <li class="selected">
+            <a class="nostyle">Item 2</a>
+          </li>
+          <li>
+            <a class="nostyle">Item 3</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+*/
+
+ul.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: inherit;
+}
+
+ul.tabs > li, ul.tabs > li * {
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--color-white-g1);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  margin-left: 20px;
+  padding: 18px 12px;
+  min-width: 80px;
+  text-align: center;
+}
+
+ul.tabs > li a, ul.tabs > a:hover, ul.tabs > a:focus, ul.tabs > a:active {
+  text-decoration: none;
+}
+
+ul.tabs > li.selected, ul.tabs > li:not(.selected):hover {
+  border-bottom: 5px solid var(--color-white-g1);
+}
+
+ul.tabs > li:not(.selected) {
+  border-bottom: 5px solid transparent;
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px) {
+  ul.tabs {
+    flex-direction: column;
+    width: 120px;
+  }
+
+  ul.tabs > li {
+    padding: 8px 12px;
+    border-bottom: 0;
+  }
+
+  ul.tabs > li:not(.selected) {
+    border-bottom: 0;
+    border-left: 5px solid transparent;
+  } 
+
+  ul.tabs > li.selected, ul.tabs > li:not(.selected):hover {
+    border-bottom: 0;
+    border-left: 5px solid var(--color-white-g1);
+  }
+
+  ul.tabs > li.selected {
+    background-color: var(--color-white-g2);
+  }
+}

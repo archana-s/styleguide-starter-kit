@@ -1,0 +1,29 @@
+/*
+@styleguide
+
+@title Logo
+
+We use text for the product logo. Use the .logo selector to style it correctly.
+
+<header class="main horizontal middle">
+  <div class="logo">My Product Name</div>
+</header>
+
+
+    <header class="main horizontal middle">
+      <div class="logo">My Product Name</div>
+    </header>
+*/
+
+.logo {
+  font-size: 28px;
+  letter-spacing: 0.08em;
+  font-family: 'Tangerine', cursive;
+  color: var(--color-white-g1);
+  margin: 0;
+}
+
+.logo span {
+  color: #EDEDED;
+  color: inherit;
+}

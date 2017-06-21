@@ -1,0 +1,171 @@
+/*
+@styleguide
+
+@title Cards
+
+Card-based layout has become popular and is great for organizing content.
+There are three types of cards offered:
+
+    1. card-basic - A padded space to place content
+    2. card-click - cards that click to take you somewhere (link or modal)
+    2. card-info - Informational cards that can have links/buttons in them
+    3. card-flip - Cards that flip to show some information on the other side
+
+<section class="card-basic vertical center theme-light"><h2 class="display-1">Heading</h2><p>Lorem Ipsum Lorem ipsum dolor sit amet, ei primis vituperatoribus mea, postea aeterno ea vim. Sea ornatus delenit gubergren eu, ut vel rebum populo disputationi. Numquam fuisset explicari nec an, vim quidam iriure delicatissimi in. Vim te tation vivendo, sea id epicuri repudiandae. Wisi aperiam dolorem eu duo, an luptatum interpretaris eam.</p></section>
+
+    <section class="card-click vertical center theme-light">
+      <h2 class="display-1">Heading</h2>
+      <p>The background color is to demonstrate the padding for the card. It can be left as it.</p>
+    </section>
+
+<a href="#" class="nostyle">
+  <section class="card-click vertical center">
+    <h2 class="display-1">Heading</h2>
+    <p>Lorem Ipsum Lorem ipsum dolor sit amet, 
+      ei primis vituperatoribus mea, postea aeterno ea vim. 
+      Sea ornatus delenit gubergren eu, ut vel rebum populo disputationi. 
+      Numquam fuisset explicari nec an, vim quidam iriure delicatissimi in.
+      Vim te tation vivendo, sea id epicuri repudiandae. Wisi aperiam 
+      dolorem eu duo, an luptatum interpretaris eam.
+    </p>
+  </section>
+</a>
+
+    <a href="#" class="nostyle">
+      <section class="card-click vertical center theme-light">
+        <h2 class="display-1">Heading</h2>
+        <p>The background color is to demonstrate the padding for the card. It can be left as is.</p>
+      </section>
+    </a>
+
+<section class="card-info vertical center"><h2 class="display-1" style="padding-left: 14px;">Heading</h2><p style="padding-left: 14px;padding-bottom: 20px;">Simul neglegentur est et, at electram signiferumque qui. Ad probatus salutatus per. Mei lucilius sensibus ad, an ius ignota quaeque abhorreant, alii timeam an sea. Vim cetero detraxit ne, eam ea omnium dignissim. Te harum appetere molestiae vix. Pro no dolores apeirian.</p><button class="link">Read more ...</button></section>
+
+    <section class="card-info">
+      <h2 class="display-1"> Heading </h2>
+      <p> Lorem Ipsum </p>
+      <button> Read more ... </button>
+    </section>
+
+<section class="card-flip" style="width:350px;height:320px;">
+  <div class="card flipping-card theme-user-input">
+    <div class="front-face noborder vertical center" style="padding: 12px">
+      <h2 class="display-1" style="margin: 8px 0">Feedback</h2>
+      <form class="vertical center" action="javascript:myFunction(); return false;">
+        <label>Let us know what you think</label>
+        <textarea></textarea>
+        <button class="submit primary" style="margin-top: 12px;">Submit</button>
+      </form>
+    </div>
+    <div class="back-face vertical center theme-default" style="padding: 12px;"> 
+      <p class="headline color-text-secondary">
+        Thank you for your feedback.
+      </p>
+    </div>
+  </div>
+</section>
+
+    <section class="card-flip vertical center">
+      <div class="card flipping-card theme-user-input">
+        <div class="front-face noborder vertical center">
+          <h2 class="display-1">Feedback</h2>
+          <form class="vertical center">
+            <label for="feedback">Let us know what you think</label>
+            <textarea id="feedback" name="feedback"></textarea>
+            <button class="primary submit" type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="back-face vertical center theme-default">
+          <p className="headline color-text-secondary">Thank you for your feedback.</p>
+        </div>
+      </div>
+    </section>
+
+Card Spacings
+
+Cards can be of two spacings:
+    1. regular - This is the default padding 18px 24px
+    2. small - smaller version of the regular card padding 8px 10px. This is preferred for smaller devices.
+
+Any of the above cards can follow these paddings.
+
+Example of small card:
+
+<section class="card-click small vertical center"><h2 class="display-1">Heading</h2><p>Lorem Ipsum Lorem ipsum dolor sit amet, ei primis vituperatoribus mea, postea aeterno ea vim. </p></section>
+
+    <section class="card-click small vertical center">
+      <h2 class="display-1">Heading</h2>
+      <p>Loreum Ipsum</p>
+    </section>
+
+<script type="text/javascript">
+  window.addEventListener('DOMContentLoaded', function() {
+    var card = document.getElementsByClassName('flipping-card')[0];
+    document.querySelector('.submit').addEventListener('click', function() {
+      card.classList.toggle('flipped')
+    });
+  });
+</script>
+*/
+
+:root {
+  --card-background: var(--color-white-g1);
+  --card-hover-background: var(--color-white-g2);
+  --card-flip-background: var(--color-white-g2);
+}
+
+*[class^="card-"] {
+  margin: 12px;
+}
+
+*[class^="card-"].small {
+  margin: 4px;
+}
+
+@media only screen and (max-device-width: 480px) {
+  *[class^="card"] {
+    width: 97%;
+    height: 97%;
+  }
+}
+
+.card-basic, .card-click, .card-info, .card-flip {
+  padding: 18px 24px;
+}
+
+.card-click:not(.noborder), .card-info:not(.noborder), .card-flip .card .front-face:not(.noborder), .card-flip .card .back-face:not(.noborder) {
+  border: 1px solid var(--color-primary);
+}
+
+.card-click, .card-flip {
+  cursor: pointer;
+}
+
+.card-flip {
+  perspective: 3000px;
+  position: relative;
+}
+
+.card-flip > .card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: transform 1.2s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-flip .front-face, .card-flip .back-face {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.card-flip .back-face {
+  transform: rotateY(180deg);
+}

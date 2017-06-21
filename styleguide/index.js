@@ -8,7 +8,7 @@ app.get('/demo', function (req, res) {
   res.sendFile(path.join(__dirname, '/public/demo.html'))
 })
 
-app.get('/styleguide', function (req, res) {
+app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, '/public/styleguide.html'))
 })
 
@@ -18,3 +18,4 @@ app.listen(4500, function () {
 
 app.use('/public', express.static(path.join(__dirname, '/public')))
 app.use('/src', express.static(path.join(__dirname, '/src')))
+

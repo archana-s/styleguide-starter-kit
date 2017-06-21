@@ -11,7 +11,7 @@ gulp.task('build:styleguide', function () {
     var extend = require('postcss-extend')
     var nano = require('cssnano')
 
-    return gulp.src('./src/styles/app.css')
+    return gulp.src('./styles/app.css')
       .pipe(postcss([
           Import,
           extend,
@@ -21,7 +21,7 @@ gulp.task('build:styleguide', function () {
               project: '%%project%%',
               dest: 'public/styleguide.html',
               showCode: false,
-              themePath: './src/styleguide-template/'
+              themePath: './styleguide-template/'
           }),
           nano
       ]))
@@ -30,9 +30,9 @@ gulp.task('build:styleguide', function () {
 })
 
 gulp.task('copy:common-files', function() {
-  return gulp.src('./src/styles/images/*.*').pipe(gulp.dest('./public/images'));
+  return gulp.src('./styles/images/*.*').pipe(gulp.dest('./public/images'));
 })
 
 gulp.task('default', function() {
-  gulp.watch('src/styles/*.css', ['build:styleguide']);
+  gulp.watch('./styles/*.css', ['build:styleguide']);
 })

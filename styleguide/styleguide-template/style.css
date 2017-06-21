@@ -587,6 +587,10 @@ p[id] {
   overflow-y: scroll;
 }
 
+.psg-menu li {
+  color: black;
+}
+
 .psg-logo {
   display: -webkit-box;
   display: -webkit-flex;

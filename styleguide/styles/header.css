@@ -1,0 +1,28 @@
+/*
+@styleguide 
+
+@title Header
+
+Default header for the top navigation, actions and logo.
+
+<header class="main horizontal middle">
+  <h2 class="logo flex-1">AppName</h2>
+  <a>Sign in</a>
+</header>
+
+    <header class="main horizontal middle">
+      <h2 class="logo flex-1">AppName</h2>
+      <a>Sign in</a>
+    </header>
+*/
+
+header.main {
+  height: 60px;
+  margin: 4px;
+  background-color: var(--color-primary);
+  padding: 0 32px;
+}
+
+header.main h1, header.main h2, header.main h3, header.main a {
+  color: var(--color-text-on-dark);
+}

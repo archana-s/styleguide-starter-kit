@@ -1,0 +1,181 @@
+/*
+@styleguide
+
+@title Buttons
+
+Buttons can be categorized based on form and function.
+These are three categories for buttons based on function:
+    1. primary -
+       Ones that call for action and are bold and bright. A page can have just one of these.
+    2. link -
+      Button that looks like a link
+    3. passive(default) -
+       Buttons that are used in the page which do not immediately call for action.
+       They are not the primary action for the page.
+    4. hotel -
+       Buttons used for a specific purpose. In this example, a button that is used with 
+       hotel reservations and booking. 
+
+Buttons can be small or large depending on the usecase. Here are two variation based on form:
+    1. large - padding of 24px/36px
+    2. medium - padding of 16px/20px
+    3. default - padding 14px/18px
+
+All buttons have a minimum width set.
+
+<button class="primary">Primary Action</button>
+
+    <button class="primary">Primary Action</button>
+
+<button class="hotel">Book Hotel Now</button>
+
+    <button class="hotel">Book Hotel Now</button>
+
+<button class="passive">passive</button>
+
+    <button class="passive">passive</button>
+
+<button class="link">Link</button>
+
+    <button class="link">Link</button>
+
+<button class="primary large">Large Primary</button>
+
+    <button class="primary large">Large Primary</button>
+
+<button class="primary medium">Medium Primary</button>
+
+    <button class="primary medium">Medium Primary</button>
+
+<button class="passive large">Large passive</button>
+
+    <button class="passive large">Large passive</button>
+
+<button class="passive medium">Medium passive</button>
+
+    <button class="passive medium">Medium passive</button>
+
+<button class="hotel large">Large Hotel</button>
+
+    <button class="hotel large">Large Hotel</button>
+
+<button class="hotel medium">Medium Hotel</button>
+
+    <button class="hotel medium">Medium passive</button>
+
+<button class="link">Button Like Link</button>
+
+    <button class="link">Button Like Link</button>
+*/
+
+/*
+@styleguide
+
+@title Links
+
+We sometimes use links as it is with its default styling and also use it 
+with the look of a button. 
+
+<a> Link </a>
+    
+    <a> Link </a>
+
+<a class="button primary"> Link Like Primary Button </a>
+
+    <a class="button primary"> Link Like Primary Button </a>
+
+<a class="button passive"> Link Like Passive Button </a>
+
+    <a class="button passive"> Link like Passive Button </a>
+
+<a class="button hotel"> Link Like Hotel Button </a>
+
+    <a class="button hotel"> Link like Hotel Button </a>
+*/
+
+/* Tip: Instead of doing <a><button></button></a> or <button><a></a></button> or worse
+<a></a> that serves as a button or <button> that routes like an <a>, please style 
+them to however you want them to look and use them semantically. 
+*/
+
+:root {
+  --button-background-color: transparent;
+  --button-font-size: 14px;
+  --button-padding: 14px 18px;
+}
+
+a, button {
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+a.button, button:not(.link) {
+  font-weight: 300;
+  font-size: var(--button-font-size);
+  box-shadow: none;
+  border: none;
+  text-transform: uppercase;
+}
+
+button:not(.link) {
+  min-width: 120px;
+}
+
+button.primary, button.passive, button.hotel,
+a.button.primary, a.button.passive, a.button.hotel {
+  padding: var(--button-padding);
+}
+
+button.primary, a.button.primary {
+  background-color: var(--color-accent-main);
+  color: var(--color-text-on-dark);
+}
+
+button.primary:hover, a.button.primary:hover {
+  background-color: #263237;
+}
+
+button.hotel, a.button.hotel {
+  background-color: var(--color-accent-hotel);
+  color: var(--color-text-on-dark);
+}
+
+button.hotel:hover, a.button.hotel:hover {
+  background-color: #3a3a17;
+}
+
+button.passive, a.button.passive {
+  background-color: transparent;
+  border: 1px solid var(--color-accent-main);
+  color: var(--color-primary-text);
+}
+
+button.passive:hover, a.button.passive:hover {
+  background-color: rgba(204, 204, 204, 0.5);
+}
+
+button.large, a.button.large {
+  padding: 24px 36px;
+  font-size: 20px;
+}
+
+button.medium, a.button.medium {
+  padding: 16px 20px;
+}
+
+a:not(.button), button.link {
+  text-decoration: none;
+  color: var(--color-text-link);
+  font-weight: 400;
+}
+
+a:not(.button):hover, a:not(.button):active, a:not(.button):focus,
+button.link:hover, button.link:active, button.link:focus {
+  text-decoration: underline;
+}
+
+a.nostyle, a.nostyle:hover, a.nostyle:active, a.nostyle:focus {
+  text-decoration: none;
+  color: inherit;
+}
