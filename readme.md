@@ -40,6 +40,8 @@ You can include the following in your package.json to include the style guide ta
  },
 ```
 
+## Report Issues
+[Please log issues here](https://github.com/archana-s/styleguide-starter-kit/issues)
 
 
 
