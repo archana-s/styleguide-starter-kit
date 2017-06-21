@@ -48,7 +48,7 @@ exec(cmd, (error, stdout, stderr) => {
           if (error) {
             console.log(`Error while trying to set up styleguide ${error} ${stdout} ${stderr}`)
           }
-          console.log('You generated styleguide + all styles are available in styleguide dir')
+          console.log('Your generated styleguide + all styles are available in styleguide dir')
         })
 
         buildStyleguide.stdout.on('data', (data) => {
