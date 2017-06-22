@@ -1,7 +1,6 @@
 # styleguide-starter-kit
 
-[Style guide generated from the stater kit](https://ssk-tester.firebaseapp.com)
-
+[Style guide generated from the stater kit](https://ssk-tester.firebaseapp.com)  
 [Demo using the style guide](https://ssk-tester.firebaseapp.com/demo.html)
 
 ## What is it?
@@ -19,7 +18,7 @@ They are grouped in to three categories:
 
 ## How do I use it? 
 - ``` npm i -g styleguide-starter-kit```
-- In the project directory, run: ```styleguide-starter-kit```
+- In the project directory, run: ```create-styleguide```
 
 It generates a styleguide folder in your project with the following: 
 - **styles**: includes all the pattern library CSS
