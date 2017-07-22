@@ -30,7 +30,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm install & gulp build:styleguide & gulp copy:common-files",
-    "start": "node ./styleguide/index.js & gulp --gulpfile ./styleguide/gulpfile.js --cwd .",
+    "start": "node ./styleguide/index.js & gulp --gulpfile ./styleguide/gulpfile.js",
     "babelify": "babel --presets es2015 setup_dev.js --out-file setup.js"
   },
   "repository": {

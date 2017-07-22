@@ -59,6 +59,20 @@ Use text colors from variables for any of the typography.
 <label class="label">Label</label>
 
     <label class="label">Label</label>
+
+Different color options on text. These color options can be applied to any font selector.
+
+<h1 class="display-2 color-text-primary">Primary Color Display-2</h1>
+    
+    <h1 class="display-2 color-text-primary">Primary Color Display-2</h1>
+
+<h1 class="display-2 color-text-secondary">Secondary Color Display-2</h1>
+    
+    <h1 class="display-2 color-text-secondary">Secondary Color Display-2</h1>
+
+<div class="body-2 color-text-secondary">Secondary Color Body-2</div> 
+
+    <div class="body-2 color-text-secondary">Secondary Color Body-2</div> 
 */
 
 /* NOTE: Feel free to set a font-size on body and then use rems and ems

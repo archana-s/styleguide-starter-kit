@@ -39,10 +39,14 @@
     **/
 
     /* The inevitables */
-    --color-primary-g1: #F4F3EE;
     --color-white-g1: #FFFFFF;
     --color-white-g2: #F4F3EE;
     --color-white-g3: #CCBA9A;
+    --color-primary-g1: #F4F3EE;
+    --color-success-g1: #DEF9DD;
+    --color-success-g2: #A4F1A1;
+    --color-danger-g1: #F7D2D2;
+    --color-danger-g2: #EE9292;
 
     --theme-default: var(--color-white-g1);
     --theme-light: var(--color-white-g2);
@@ -58,6 +62,40 @@
         As easy as this may be, it adds to color collisions. Instead, evaluate the colors
         and add the appropriate ones here **/
 }
+/* @end color */
+
+/*
+@styleguide
+
+@title Color Selectors
+
+These are the selectors that are available for using the colors. We
+have them available for themes and text colors.
+
+<div class="theme-default" style="width: 200px;height: 100px;padding: 8px;">
+  Lorem Ipsum
+</div>
+
+    <div class="theme-default" style="width: 200px;height: 100px;padding: 8px;">
+      Lorem Ipsum
+    </div>
+
+<div class="theme-light" style="width: 200px;height: 100px;padding: 8px;">
+  Lorem Ipsum
+</div>
+
+    <div class="theme-light" style="width: 200px;height: 100px;padding: 8px;">
+      Lorem Ipsum
+    </div>
+
+<div class="theme-user-input" style="width: 200px;height: 100px;padding: 8px;">
+  Lorem Ipsum
+</div>
+
+    <div class="theme-user-input" style="width: 200px;height: 100px;padding: 8px;">
+      Lorem Ipsum
+    </div>
+*/
 
 .theme-default {
   background-color: var(--theme-default);
@@ -75,7 +113,18 @@
   color: var(--color-text-primary);
 }
 
+.color-text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.color-text-caption {
+  color: var(--color-text-caption);
+}
+
+.color-text-on-dark {
+  color: var(--color-text-on-dark);
+}
+
 .color-text-link {
   color: var(--color-text-link);
 }
-/* @end color */
