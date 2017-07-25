@@ -8,8 +8,8 @@ There are three types of cards offered:
 
     1. card-basic - A padded space to place content
     2. card-click - cards that click to take you somewhere (link or modal)
-    2. card-info - Informational cards that can have links/buttons in them
-    3. card-flip - Cards that flip to show some information on the other side
+    3. card-info - Informational cards that can have links/buttons in them
+    4. card-flip - Cards that flip to show some information on the other side
 
 <section class="card-basic vertical center theme-light"><h2 class="display-1">Heading</h2><p>Lorem Ipsum Lorem ipsum dolor sit amet, ei primis vituperatoribus mea, postea aeterno ea vim. Sea ornatus delenit gubergren eu, ut vel rebum populo disputationi. Numquam fuisset explicari nec an, vim quidam iriure delicatissimi in. Vim te tation vivendo, sea id epicuri repudiandae. Wisi aperiam dolorem eu duo, an luptatum interpretaris eam.</p></section>
 
@@ -138,6 +138,10 @@ Example of small card:
 
 .card-click, .card-flip {
   cursor: pointer;
+}
+
+.card-click:hover {
+  background-color: var(--color-white-g2);
 }
 
 .card-flip {
